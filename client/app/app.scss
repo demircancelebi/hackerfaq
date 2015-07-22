@@ -1,0 +1,12 @@
+// Component styles are injected through grunt
+// injector
+@import '_01_variables.scss';
+@import '_02_bs_variables.scss';
+@import '_03_imports.scss';
+@import '_04_general.scss';
+@import '_05_utils.scss';
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'main/main.scss';
+@import 'modal/modal.scss';
+// endinjector

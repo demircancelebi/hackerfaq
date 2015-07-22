@@ -1,0 +1,27 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit text-center">
+  <div class="container">
+    <h1>What do you wanna know?</h1>
+    <p class="lead">Ex: <a href="#" ng-click="fillAndAsk('merge arrays in c')">merge arrays in c</a>, <a href="#" ng-click="fillAndAsk('find last occurrence of a number in an array in java')">find last occurrence of a number in an array in java</a>, <a href="#" ng-click="fillAndAsk('clear bash')">clear bash</a>...</p>
+    <div class="col-sm-8 col-sm-offset-2">
+      <form ng-submit="ask($event)">
+        <div class="input-group ask-input-group">
+          <span class="input-group-addon">how can I</span>
+          <input type="text" class="form-control input-lg" ng-model="question.question" placeholder="color placeholder css">
+          <span class="input-group-addon p0"><input type="submit" class="btn btn-success btn-ask" value="{{ askLabel }}"></span>
+        </div>
+      </form>
+      <div class="panel panel-default panel-ask" ng-show="question.answer">
+        <div class="panel-body p0">
+        <pre class="m0">
+          <code class="html js-answer" ng-bind="question.answer"></code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div ng-include="'components/footer/footer.html'"></div>

@@ -1,0 +1,293 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: $c1;
+  color: $c2;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 120px;
+}
+a, a:hover {
+  color: $c1;
+}
+.navbar-default {
+  background-color: $c1;
+  position: relative;
+  z-index: 3;
+  border: none !important;
+  &, & a {
+    color: $c2 !important;
+  }
+  .navbar-brand {
+    background: transparent !important;
+    font-size: 28px;
+    padding: ($navbar-height - 20)/2 0 0 ($navbar-height - 20)/2;
+    small {
+      display: inline-block;
+      line-height: 12px;
+      font-size: 12px;
+    }
+  }
+}
+.navbar-dashboard {
+  background: $c1;
+  min-height: 50px;
+  height: 50px;
+  .navbar-brand, .navbar-right li a {
+    height: 20px;
+    padding-top: ($navbar-height - 20)/2;
+    padding-bottom: ($navbar-height - 20)/2;
+  }
+}
+
+.dashboard {
+  padding-top: 80px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > a:hover, .navbar-default .navbar-nav > li:hover > a {
+  background: transparent !important;
+  color: #fff !important !important;
+}
+
+.navbar-nav {
+  margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+
+  > li {
+    &.active a {
+      border-bottom: 1px solid $c2;
+    }
+    & > a {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.9em;
+      &:hover {
+        color: rgba(255,255,255,0.7) !important;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+  .icon-bar {
+    background: #fff;
+  }
+}
+
+.nav.navbar-nav.navbar-right {
+  margin: 0;
+}
+
+.navbar-default .navbar-toggle.active, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: $c1;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav.navbar-nav.navbar-right {
+    background: #fff;
+    margin: 15px -15px;
+  }
+  .navbar-header a {
+    color: #fff !important;
+  }
+  .navbar-collapse a {
+    color: $c1 !important;
+  }
+  .navbar-header.on_nav a {
+    color: $c1 !important;
+  }
+  .navbar-nav > li.active a {
+    border-color: $c1;
+  }
+}
+
+.footer {
+  background: $c1;
+  text-align: center;
+  color: $c2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  padding: 20px 0;
+  a {
+    color: $c2 !important;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    font-size: 0.9em;
+  }
+}
+
+.choosable-block {
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 20px;
+  padding: 20px;
+  width: 350px;
+  text-align: left;
+  background: #eee;
+  color: #555;
+  @include transition(all .3s);
+  .choosable-block-list {
+    margin-bottom: 0;
+  }
+  .choosable-block-title {
+    margin-top: 0;
+    color: #333;
+  }
+  &:hover, &.active{
+    border: 2px solid $c2;
+    background: #fcfcfc;
+  }
+}
+
+.btn {
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9em;
+}
+
+.barely_visible {
+  opacity: .3;
+}
+
+.insignificant {
+  opacity: .8;
+}
+
+$btn-dark-color:              #fff !default;
+$btn-dark-bg:                 $c3 !default;
+$btn-dark-border:             lighten($btn-dark-bg, 5%) !default;
+
+.btn-dark {
+  @include button-variant($btn-dark-color, $btn-dark-bg, $btn-dark-border);
+}
+
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+pre code {
+  display: block; padding: 0.5em;
+  background: #272822;
+}
+
+pre .params .identifier .keymethods {
+  color: #FD971F;
+}
+
+pre .tag,
+pre .tag .title,
+pre .keyword,
+pre .literal,
+pre .change,
+pre .winutils,
+pre .flow,
+pre .lisp .title,
+pre .nginx .title,
+pre .tex .special {
+  color: #F92672;
+}
+
+pre code {
+  color: #DDD;
+}
+
+pre code .constant {
+  color: #66D9EF;
+}
+
+pre .class .title {
+  color: white;
+}
+
+pre .attribute,
+pre .symbol,
+pre .value,
+pre .regexp {
+  color: #BF79DB;
+}
+
+pre .tag .value,
+pre .string,
+pre .ruby .subst,
+pre .title,
+pre .haskell .type,
+pre .preprocessor,
+pre .ruby .instancevar,
+pre .ruby .class .parent,
+pre .built_in,
+pre .sql .aggregate,
+pre .django .template_tag,
+pre .django .variable,
+pre .smalltalk .class,
+pre .javadoc,
+pre .ruby .string,
+pre .django .filter .argument,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .attr_selector,
+pre .pseudo,
+pre .addition,
+pre .stream,
+pre .envvar,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .tex .command,
+pre .input_number {
+  color: #A6E22E;
+}
+
+pre .comment,
+pre .java .annotation,
+pre .python .decorator,
+pre .template_comment,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .shebang,
+pre .apache .sqbracket,
+pre .tex .formula {
+  color: #75715E;
+}
+
+pre .keyword,
+pre .literal,
+pre .css .id,
+pre .phpdoc,
+pre .title,
+pre .haskell .type,
+pre .vbscript .built_in,
+pre .sql .aggregate,
+pre .rsl .built_in,
+pre .smalltalk .class,
+pre .diff .header,
+pre .chunk,
+pre .winutils,
+pre .bash .variable,
+pre .apache .tag,
+pre .tex .special,
+pre .request,
+pre .status {
+  font-weight: bold;
+}
+
+pre .coffeescript .javascript,
+pre .xml .css,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .tex .formula {
+  opacity: 0.5;
+}

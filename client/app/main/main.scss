@@ -1,0 +1,54 @@
+.hero-unit {
+  position: relative;
+  padding: 80px 15px;
+  color: $c2;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: $c1;
+  a {
+    color: $c2;
+  }
+}
+
+.ask-input-group {
+  .input-group-addon {
+    background: transparent;
+    border-color: $c2;
+    color: $c2;
+  }
+  input {
+    color: $c2;
+    border-color: $c2;
+    background: transparent;
+  }
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: darken($c2, 20%);
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: darken($c2, 20%);
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: darken($c2, 20%);
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: darken($c2, 20%);
+  }
+}
+
+.btn-ask {
+  height: 44px;
+  width: 120px;
+}
+
+.panel-ask {
+  text-align: left;
+  margin-top: 10px;
+  color: #333;
+  border: none;
+  pre {
+    border: none;
+    margin: 0;
+    background: #272822;
+  }
+}
